@@ -8,7 +8,7 @@
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "http://github.com/edzzh/danceWEB.git",
   "scripts": {
     "build": "ember build",
     "start": "ember server",
