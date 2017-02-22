@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Arvo');
+
+body{
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  font-size: 15px;
+	font-weight: 400;
+}
+ol, ul {
+	list-style: none;
+}
+a {
+    outline: none;
+}
+
+a:hover, a:focus, a:active{
+	text-decoration: none;
+  outline: none;
+}
+/**********/
+.header{
+  background: url('/assets/images/dance-group.jpg') no-repeat fixed;
+  background-size: cover;
+  min-height: 630px;
+  position: relative;
+}
+.bg-color{
+  background-color: RGBA(0, 0, 0, 0.67);
+  min-height: 638px;
+}
+/**********Navigation**************/
+.navbar-default{
+  background-color: transparent;
+  border: 0px;
+  padding: 20px 0;
+  transition: all 0.3s;
+}
+.navbar-brand{
+  font-size: 50px;
+  font-family: 'Lobster', cursive;
+}
+.navbar-default .navbar-brand, .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+    color: #D00D25;
+    outline: none;
+}
+.navbar-default .navbar-nav > li > a{
+	font-size: 16px;
+	font-weight: 300;
+	color: #fff;
+  outline: none;
+  font-family: 'Arvo', serif;
+}
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
+    color: #D00D25;
+    background-color: transparent;
+}
+/**** Navigation banner ****/
+.banner-text{
+  border-left: 5px solid #D00D25;
+	padding: 15px 40px;
+	color: #fff;
+	margin-top: 170px;
+}
+.banner-text h2, .banner-text p{
+	font-size: 40px;
+	font-weight: 400;
+	font-family: 'Arvo', serif;
+}
+.banner-text span{
+  color: #D00D25;
+  font-family: 'Lobster', cursive;
+}
