@@ -20,6 +20,13 @@
     <script src="{{rootURL}}assets/vendor.js"></script>
     <script src="{{rootURL}}assets/dance-web-page.js"></script>
     <script src="{{rootURL}}assets/main.js"></script>
+    <script type='text/javascript'>
+    $(document).ready(function() {
+         $('.carousel').carousel({
+             interval: 4000
+         })
+    });
+    </script>
     {{content-for "body-footer"}}
   </body>
 </html>
