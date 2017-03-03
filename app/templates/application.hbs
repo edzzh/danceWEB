@@ -1,7 +1,39 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{!welcome-page}}
 
-<h1>Hello Nilzz</h1>
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+<div class="header">
+  <div class="bg-color">
+      <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#infoMenu">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            {{#link-to "home"}}<a class="navbar-brand" href="#">Dance Group</a>{{/link-to}}
+          </div>
+            <div class="navbar-collapse collapse  navbar-right" id="infoMenu">
+              <ul class="nav navbar-nav">
+                <li>{{#link-to "about"}}<a href="#">About</a>{{/link-to}}</li>
+                <li>{{#link-to "gallery"}}<a href="#">Gallery</a>{{/link-to}}</li>
+                <li>{{#link-to "schedule"}}<a href="#">Schedule</a>{{/link-to}}</li>
+                <li>{{#link-to "contact"}}<a href="#">Contact Us</a>{{/link-to}}</li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12 wow fadeIn delay-05s">
+                    <div class="banner-text">
+                      <h2>Hi, we are <span>DNCE</span>!</h2>
+                      <p>Latvian dance group.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  </div>
+</div>
+<!--Content Container -->
+<div class="container-fluid">
+  {{outlet}}
+</div>
