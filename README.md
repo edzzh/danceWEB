@@ -19,6 +19,8 @@ You will need the following things properly installed on your computer.
 * `cd dance-web-page`
 * `npm install`
 * `bower install`
+* `bower install bootstrap`
+* `bower install wow`
 
 ## Running / Development
 
