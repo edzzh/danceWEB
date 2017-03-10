@@ -1,1 +1,56 @@
-<h1>Contact Us</h1>
+<div class="container" id="contact">
+  <div class="row">
+    <div class="col-md-6">
+      <h3>HOW TO FIND US</h3>
+      <hr>
+      <div id="map-container"></div>
+      <script>
+      function init_map() {
+      var var_location = new google.maps.LatLng(57.38499670405224, 21.54590606689453);
+
+           var var_mapoptions = {
+             center: var_location,
+             zoom: 14
+           };
+
+      var var_marker = new google.maps.Marker({
+         position: var_location,
+         map: var_map
+         });
+
+      var var_map = new google.maps.Map(document.getElementById("map-container"), var_mapoptions);
+
+      var_marker.setMap(var_map);
+
+      }
+      google.maps.event.addDomListener(window, 'load', init_map);
+      </script>
+    </div>
+    <div class="col-md-6">
+      <h3>CONTACT</h3>
+      <hr>
+      <div class="form-area">
+        <form role="form">
+    				<div class="form-group">
+						   <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+					  </div>
+					  <div class="form-group">
+						   <input type="text" class="form-control" id="email" name="email" placeholder="Email" required>
+					  </div>
+					  <div class="form-group">
+						   <input type="text" class="form-control" id="mobile" name="mobile" placeholder="Mobile Number" required>
+					  </div>
+					  <div class="form-group">
+						   <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
+					  </div>
+            <div class="form-group">
+               <textarea class="form-control" type="textarea" id="message" placeholder="Message" maxlength="500" rows="7"></textarea>
+               <span class="help-block"><p id="characterLeft" class="help-block ">You have reached the limit</p></span>
+            </div>
+
+        <button type="button" id="submit" name="submit" class="btn btn-primary pull-right">Submit Form</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
