@@ -12,6 +12,7 @@ Router.map(function() {
   this.route('gallery', {path: '/gallery'});
   this.route('schedule', {path: '/schedule'});
   this.route('contact', {path: '/contact'});
+  this.route('members', {path: '/members'});
 });
 
 export default Router;

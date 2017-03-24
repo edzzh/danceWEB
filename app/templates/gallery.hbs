@@ -5,3 +5,32 @@
     </div>
   </div>
 </div>
+<div class="container" style="padding-top: 10px;">
+  <div class="row">
+    {{#each model as |gallery|}}
+    <div class="col-sm-6 col-md-3">
+      <div class="thumbnail">
+        <img class="img-responsive" src="{{gallery.link}}" alt="The awesome description" />
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <form name="photo" id="imageUploadForm" method="post">
+        <input type="file" />
+        <br>
+        <button type="submit" name="upload" style="color: black;" onclick="uploadImage();">Upload</button>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h2>VIDEO</h2>
+    </div>
+  </div>
+</div>
