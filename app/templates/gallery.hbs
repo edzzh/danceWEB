@@ -19,10 +19,10 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6">
-      <form name="photo" id="imageUploadForm" method="post">
-        <input type="file" />
+      <form enctype="multipart/form-data" method="post" id="imageUploadForm">
+        <input id="image-file" type="file" name="photo" />
         <br>
-        <button type="submit" name="upload" style="color: black;" onclick="uploadImage();">Upload</button>
+        <button type="submit" id="submit-button" style="color: black;">Upload</button>
       </form>
     </div>
   </div>

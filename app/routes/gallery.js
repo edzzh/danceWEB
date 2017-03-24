@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 var err = function error() {
-  console.log("er");
+  //console.log("er");
 };
 
 var gallery = [];
@@ -20,16 +20,63 @@ function getImageFunc(){
   });
 }
 //Image Post
+var form = $('#mageUploadForm');
+var files;
+var fileSelected = $('#image-file').value;
+
+$('input[type=file]').on('change', prepareUpload);
+function prepareUpload(event){
+  files = event.target.files;
+}
+
+form.on('submit', uploadFiles);
+function uploadFiles(event){
+  event.stopPropagation();
+  event.preventDefault();
+
+  var data = new FormData();
+  $.each(files, function(key,value){
+    data.append(key,value);
+  });
+
+  $.ajax({
+    url: "nodejs url",
+    type: "POST",
+    data: data,
+    cache: false,
+    dataType: 'json',
+    processData: false, //Dont process the files
+    contentType: false, //Set content type to a false jQuery
+    success: function(data, textStatus, jqXHR){
+      if(typeof data.error === 'undefined'){
+        //success so call function to process the form
+        submitForm(event,data);
+      }
+      else{
+        //Handle errors here
+        console.log('Errors: ' + data.error);
+      }
+    },
+    error: function(jqXHR, textStatus, errorThrown){
+      console.log('Errors: '+textStatus);
+    }
+  });
+}
+
+
+/*
 function uploadImage(){
-  var image = $('#imageUploadForm');
   Ember.$.ajax({
     url: "url",
     type: "POST",
-    data: image,
+    data: datastring,
     success: getImageFunc(result),
     error: err(error)
   });
 }
+
+*/
+
 
 getImageFunc();
 
