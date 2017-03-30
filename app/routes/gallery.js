@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 var err = function error() {
-  //console.log("er");
+  console.log("er");
 };
 
 var gallery = [];
@@ -19,21 +19,6 @@ function getImageFunc(){
     failure: err()
   });
 }
-//Image Post
-var form = $('#imageUploadForm');
-var fileSelected = $('#image-file').value;
-
-$('#submit-button').on('click', uploadImage);
-function uploadImage(){
-  Ember.$.ajax({
-    url: "url",
-    type: "POST",
-    data: datastring,
-    success: getImageFunc(result),
-    error: err(error)
-  });
-}
-
 
 
 getImageFunc();
