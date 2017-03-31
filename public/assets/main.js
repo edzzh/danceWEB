@@ -47,7 +47,7 @@ $(document).ready(function(){
                  var id = $('.item.active').data('slide-number');
                 $('#carousel-text').html($('#slide-content-'+id).html());
         });
-        
+
       //youtube Stuff
       videos = document.querySelectorAll("video");
       for (var i = 0, l = videos.length; i < l; i++) {
@@ -73,5 +73,108 @@ $(document).ready(function(){
               }
           }
       }
+      //calendar
+      var date = new Date();
+       var d = date.getDate();
+       var m = date.getMonth();
+       var y = date.getFullYear();
+       $('#calendar').fullCalendar({
+
+       header: {
+         left: 'prev, next today',
+         center: 'title',
+         right: 'month, agendaWeek, agendaDay'
+       },
+       editable: true,
+       weekMode: 'liquid',
+       url:'#',
+       selectable: true,
+       selectHelper: true,
+       eventLimit: true,
+       events: [
+                   {
+                       title: 'Praent vestibulum',
+                       start: new Date(y, m, 1, 9, 00),
+                       end: new Date(y, m, 1, 10, 00),
+                       allDay: false
+                   },
+                   {
+                       title: 'Vestibulum iaculis lacinia',
+                       start: new Date(y, m, 2, 16, 00),
+                       allDay: false
+                   },
+                   {
+                       title: 'Integer rutrum ante eu lacus',
+                       start: new Date(y, m, 4, 16, 00),
+                       allDay: false
+                   },
+                   {
+                       title: 'Aliquam erat volpat. Duis ac turpis',
+                       start: new Date(y, m, 9, 16, 00),
+                       allDay: false
+                   },
+                   {
+                       title: 'Donec in velit vel ipsum',
+                       start: new Date(y, m, 10, 16, 00),
+                       allDay: false
+                   },
+                   {
+                       title: 'Praent vestibulum',
+                       start: new Date(y, m, 13, 9, 00),
+                       allDay: false
+                   },
+                   {
+                       title: 'Vestibulum iaculis lacinia',
+                       start: new Date(y, m, 15, 16, 00),
+                       allDay: false
+                   },
+                   {
+                       title: 'Integer rutrum ante eu lacus',
+                       start: new Date(y, m, 17, 16, 00),
+                       allDay: false
+                   },
+                   {
+                       title: 'nteger rutrum ante eu lacusi',
+                       start: new Date(y, m, 18, 16, 00),
+                       allDay: false
+                   },
+                   {
+                       title: 'Integer rutrum ante eu lacus',
+                       start: new Date(y, m, 19, 16, 00),
+                       allDay: false
+                   },
+                   {
+                       title: 'Integer rutrum ante eu lacus',
+                       start: new Date(y, m, 23, 16, 00),
+                       allDay: false
+                   },
+                   {
+                       title: 'nteger rutrum ante eu lacus',
+                       start: new Date(y, m, 24, 16, 00),
+                       allDay: false
+                   },
+                   {
+                       title: 'Integer rutrum ante eu lacus',
+                       start: new Date(y, m, 27, 16, 00),
+                       allDay: false
+                   },
+                   {
+                       title: 'Integer rutrum ante eu lacus',
+                       start: new Date(y, m, 28, 16, 00),
+                       allDay: false
+                   },
+                   {
+                       title: 'Vestibulum iaculis lacinia',
+                       start: new Date(y, m, 29, 16, 00),
+                       allDay: false
+                   },
+                   {
+                       title: 'Praent vestibulum',
+                       start: new Date(y, m, 30, 9, 00),
+                       allDay: false
+                   }
+               ]
+
+       });
 
 });
